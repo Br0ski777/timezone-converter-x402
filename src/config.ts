@@ -30,6 +30,63 @@ Do NOT use for currency conversion -- use finance_convert_currency instead. Do N
         },
         required: ["datetime", "from", "to"],
       },
+      outputSchema: {
+          "type": "object",
+          "properties": {
+            "input": {
+              "type": "object",
+              "properties": {
+                "datetime": {
+                  "type": "string"
+                },
+                "timezone": {
+                  "type": "string"
+                }
+              }
+            },
+            "from": {
+              "type": "object",
+              "properties": {
+                "datetime": {
+                  "type": "string"
+                },
+                "timezone": {
+                  "type": "string"
+                },
+                "abbreviation": {
+                  "type": "string"
+                }
+              }
+            },
+            "to": {
+              "type": "object",
+              "properties": {
+                "datetime": {
+                  "type": "string"
+                },
+                "timezone": {
+                  "type": "string"
+                },
+                "abbreviation": {
+                  "type": "string"
+                }
+              }
+            },
+            "utc": {
+              "type": "string",
+              "description": "UTC ISO 8601 timestamp"
+            },
+            "offsetDifference": {
+              "type": "string",
+              "description": "Offset difference between timezones"
+            }
+          },
+          "required": [
+            "from",
+            "to",
+            "utc"
+          ]
+        },
     },
   ],
 };
