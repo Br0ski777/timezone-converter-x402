@@ -9,7 +9,7 @@ export const API_CONFIG: ApiConfig = {
     {
       method: "POST",
       path: "/api/convert",
-      price: "$0.001",
+      price: "$0.003",
       description: "Convert a datetime between timezones",
       toolName: "utility_convert_timezone",
       toolDescription: `Use this when you need to convert a date/time from one timezone to another. Returns the converted datetime with offset data in JSON.
